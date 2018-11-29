@@ -1,11 +1,10 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  #host: localhost
-  host: database #<--the name of the db in the docker-compose
+  host: consul-db
   pool: 5
   port: 5432
-  username: postgres
+  username: consul
   password: <%= ENV['POSTGRES_PASSWORD'] %>
 
 development: &development
